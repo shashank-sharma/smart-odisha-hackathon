@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teenagers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<style>
+    .question>li
+    {
+        list-style-type:square !important;
+        font-size:1.2rem;
+    }
+</style>
+</head>
+<body>
+<!--<div class="container">-->
+
+    <div class="parallax-container">
+      <div class="parallax"><img src="{% static 'img/teen_11.jpg' %}" height="100%" width="100%"></div>
+    </div>
+    <div class="row">
+        <div class="col m2 l2"></div>
+        <div class="col s12 m8 l8">
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header red-text text-darken-2">
+                        <i class="material-icons right">face</i>
+                        How Youth are being bullied
+                    </div>
+                    <div class="collapsible-body red-text">
+                        <ul class="question">
+                            <li>Hurtful messages, harmful social media posts, identity theft, sexual harassment</li>
+                            <li>About 2/3 of teenage cyber bullying victims have been harassed via Facebook</li>
+                            <li>10% of Young People Have Had Embarrassing Photos Taken</li>
+                            <li>Video Gaming Is One of the Biggest Arenas of Cyber Bullying</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header green-text text-darken-2">
+                        <i class="material-icons left">child_care</i>
+                        Preventive Steps
+                    </div>
+                    <div class="collapsible-body green-text">
+                        <ul class="question">
+                            <li>Know that it’s not your fault</li>
+                            <li>Don’t respond or retaliate.</li>
+                            <li>Reach out for help</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col m2 l2"></div>
+    </div>
+<div class="container">
+          <div class="row">
+              <div class="col s12 m6 l6">
+                  <a class="waves-effect waves-light btn-large left green darken-1" href="/"><i class="material-icons left">chevron_left</i>Go Back</a>
+              </div>
+              <div class="col s12 m6 l6">
+                  <a class="waves-effect waves-light btn-large right red lighten-1" href="{% url 'complaints' %}"><i class="material-icons right">arrow_forward</i>Not satisfied ? File a complaint</a>
+              </div>
+          </div>
+      </div>
+<!--</div>-->
+</body>
+<script>
+    $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+</script>
+<script>
+        $(document).ready(function(){
+          $('.parallax').parallax();
+        });</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Documentation</title>
+</head>
+<body>
+<h1>API Documentation</h1>
+<b>/api/chart/complaint</b>
+<br>
+To get all the complaint available in format: complaints count and subject list
+<br>
+<p><b><i>Available Filters:</i></b></p>
+<p><i>gender :-</i> Gender can be ['male', 'female', 'others']</p>
+<p><i>state :-</i> State can be values defined in shortforms: Madhya Pradesh = MP</p>
+<p><i>city :-</i> City needs to be specific word (BETA)</p>
+<p><i>from :-</i> If you want results from specific date till present then use from<br>
+/api/chart/complaint?from=2018-01-23<br>
+    This compiles to complaints from 23rd of Jan, 2018 till present. So your format must be yyyy-mm-dd strictly else no result will be there.
+</p>
+<p><i>to :-</i> To specify the end date. Means from past to that date it will fetch all complaints</p>
+<p><b>Note:</b> You can use both from and to parameters to get specific range of complaints</p>
+<p>/api/chart/complaint?from=2018-01-10&to=2018-01-15<br>This will get complaints from 10th Jan to 15th Jan of 2018</p>
+<p><i>tags :-</i> Specify tags from available list to get complaints according to that. (BETA)</p>
+<p><i>week :-</i> It can be either true or false. Week will get complaints from past 7 days of data</p>
+<p>Note: This should not be used with from and to parameters</p>
+<p><i>date :-</i> Get complaint of specific date by mentioning it in format yyyy-mm-dd</p>
+<p><i>resolved :-</i> Get complaint which are resolved. Value can be either true or false</p>
+<br>
+<br>
+<b>/api/chart/tags</b>
+<br>
+It helps you get all the trending tags available. Format: "tags": Showing all tags with count, "top": Showing top trending tag
+<br>
+This api call needs no parameter
+<br>
+<br>
+<b>api/chart/week</b>
+<br>
+This on is little similar to our first API url but with single call you will get result of all complaints from past 7 days.
+<br>
+This will give you total complaints, data where data contains values of each date. Each date data will have male, female, others count.
+</body>
+</html>

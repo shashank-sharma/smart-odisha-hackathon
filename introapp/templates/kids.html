@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+     <!--Import my css-->
+     <!-- <link rel="stylesheet" href="randombully.css"> -->
+     <!--Import chart js-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Child Councelling</title>
+    </head>
+
+    <body>
+
+      <!--page layout start-->
+      <div class="row"></div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="{% static 'img/childimage.jpg' %}"></div>
+    </div>
+      <div class="section white">
+        <div class="row container">
+          <h2 class="header"></h2>
+          <p class="grey-text text-darken-3 lighten-3">
+          <h2 class="purple-text text-darken-2">How to tell if your child is being cyberbullied:</h2><hr></hr>
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header red-text text-darken-4"><i class="material-icons">face</i>Warning signs</div>
+              <div class="collapsible-body"><span class="red-text">
+                Because many children won't tell their parents they're being cyberbullied,
+                parents need to watch for potential warning signs:<br>
+                - Your child is suddenly spends much more - or much less - time texting,
+                gaming or using social-networking websites. Any rapid change could be an alarm bell<br>
+                - After texting or being online, he or she seems withdrawn, upset or outraged<br></br>
+                - Your child asks to have a social-media or online account shut down<br></br>
+                - He or she suddenly avoids formerly enjoyable social situations<br></br>
+                - He or she blocks a number or an email address from his or her account<br></br>
+                - Many new phone numbers, texts or email addresses show up on your child's phone, laptop or tablet<br></br>
+                - He or she acts frustrated and impatient, or simply acts out more<br></br>
+                - Strangers have opened Facebook or other social-media accounts in your child's name<br></br>
+                - Your child notices that he or she is being gossiped about online, or that others are using "code words" in place of his or her name
+              </span></div>
+            </li>
+          <li>
+          <div class="collapsible-header green-text text-darken-4"><i class="material-icons">child_care</i>Solution</div>
+          <div class="collapsible-body"><span class="green-text">
+              <h4>Approach gently but firmly</h4>
+              If you believe your child is being cyberbullied, initiate a conversation, but take care to do so in such a way that your child feels your unconditional support.<br></br>
+              "Parents must demonstrate to their children through words and actions that they both desire the same end result: that the cyberbullying stop and that life does not
+              become even more difficult," said Sameer Hinduja, Ph.D., co-director of the Cyberbullying Research Center. <br></br>
+              "This can be accomplished by working together to arrive at a mutually agreeable course of action, as sometimes it is appropriate (and important) to solicit the child's perspective as to what might be done to improve the situation," Hinduja added.
+              <h4>Reaching out</h4>
+              The police should be approaced if physical threats are involved, or a crime has been possibly committed.<br></br>
+              That's why parents must also educate their children about appropriate online behaviors and take the time to monitor, however informally, their children's Internet-related habits. <br></br>
+              Kids need to learn that inappropriate actions will not be tolerated.
+          </span></div>
+        </li>
+
+          </ul>
+
+
+          </div>
+          <div class="container">
+          <div class="row">
+              <div class="col s12 m6 l6">
+                  <a class="waves-effect waves-light btn-large left green darken-1" href="/"><i class="material-icons left">chevron_left</i>Go Back</a>
+              </div>
+              <div class="col s12 m6 l6">
+                  <a class="waves-effect waves-light btn-large right red lighten-1" href="{% url 'complaints' %}"><i class="material-icons right">arrow_forward</i>Not satisfied ? File a complaint</a>
+              </div>
+          </div>
+      </div>
+
+        </div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $('.parallax').parallax();
+        });</script>
+    </body>
+  </html>

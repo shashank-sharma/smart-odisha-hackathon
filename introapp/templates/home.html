@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/home.css' %}"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/loader.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Import chart js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+</head>
+<body>
+<!--Navbar-->
+<!-- style="background:linear-gradient(to right, grey, black)" -->
+<nav class="black">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="{% url 'home' %}" class="waves-effect flow-text">Home</a></li>
+            <li><a href="{% url 'types_of_cyber_bullying' %}" class="waves-effect flow-text">Types</a></li>
+            <li><a href="{% url 'councelling' %}" class="btn grey darken-4 waves-effect flow-text">Report Complaint</a>
+            </li>
+            <li><a href="{% url 'login' %}" class="btn grey darken-4 waves-effect flow-text">Admin Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col s12 l12 m12" style="height: 100vh;">
+        <h5 class="white-text flow-text center-block left-align" style="position:absolute;font-size: 52px;
+        top: 20%;text-align: center;padding: 100px;">
+            Are you being bullied?<br><br>
+            Allow us to help you overcome the ever-rising barrier of cyberbulling
+        </h5>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m12 l5" id="codebase" style="padding-left: 100px;">
+        <div class="white-text flow-text">
+            <p style="font-size: 40px">Code base</p><br>
+            <p>We keep your data secure so that no hacker can get into your personal data.</p><br>
+            <p>A ticket will be generated for every complaint. This ticket will possess a unique ID. </p><br>
+            <p>This will help the consultant and the user to uniquely identify the complaint and track down the progress made by the officials in solving the issue.</p>
+        </div>
+    </div>
+    <div class="col s12 m6 l7" style="">
+        <!--Animation-->
+
+        <div class="grid hide-on-med-and-down main-animation">
+            <p class="one" id="one" style="display: none;"><span class="s"></span></p>
+            <p class="two" id="two" style="display: none;"><span class="s"></span></p>
+            <p class="three" id="three" style="display: none;"><span class="s"></span></p>
+            <p class="four" id="four" style="display: none;"><span class="s"></span></p>
+            <p class="five" id="five" style="display: none;"><span class="s"></span></p>
+            <p class="six" id="six" style="display: none;"><span class="s"></span></p>
+            <p class="seven" id="seven" style="display: none;"><span class="s"></span></p>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="padding-top: 200px;">
+    <div class="col s12 m12 l5" id="dashboard" style="padding-left: 100px;">
+        <div class="white-text flow-text">
+            <p style="font-size: 40px">Admin Dashboard</p><br>
+            <p>We have proper organization for admin to have systematic work</p><br>
+            <p>Complaints will be classified on the basis of tags. This allows the officials to search for problems on the basis of tags.</p><br>
+            <p>This will include a certain level of flexibility to the search process and the officials as well since they can now search for tags in their area of expertise.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="padding-top: 200px;padding-bottom: 200px;">
+    <div class="col s12 m12 l5" id="analytics" style="padding-left: 100px;">
+        <div class="white-text flow-text">
+            <p style="font-size: 40px">Analytics</p><br>
+            <p>Data will be analyzed on a regular basis and shown in the analytics dashboard.</p>
+            <p>
+Analytical data will include the location(s) and the tag(s) associated with the complaint
+                This will help in identifying the areas which are infested with the heinous crime of cyberbullying</p><br>
+<p>This will also bring into our notice the types of cyberbullying occuring in those areas, including the frequency at which the complaints are addressed and solved by the authorities.</p><br>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row" style="padding-top: 50px;padding-bottom: 300px;" id="product">
+    <div class="col s12 m12 l5" id="analytics" style="padding-left: 100px;height: 300px;">
+        <div class="white-text flow-text">
+            <p style="font-size: 40px">Summary</p><br>
+            <p>In short we have layers of implementation to make sure that we solve your problems.</p><br>
+        </div>
+    </div>
+        <div class="col s12 m6 l7" style="">
+        <!--Animation-->
+
+        <div class="grid hide-on-med-and-down main-animation">
+            <p class="one" id="one-product" style="display: none;"><span class="s"></span></p>
+            <p class="two" id="two-product" style="display: none;"><span class="s"></span></p>
+            <p class="three" id="three-product" style="display: none;"><span class="s"></span></p>
+            <p class="four" id="four-product" style="display: none;"><span class="s"></span></p>
+            <p class="five" id="five-product" style="display: none;"><span class="s"></span></p>
+            <p class="six" id="six-product" style="display: none;"><span class="s"></span></p>
+            <p class="seven" id="seven-product" style="display: none;"><span class="s"></span></p>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col s12 m12 l12">
+
+        <!--Card start-->
+        <div class="card-panel grey darken-4 cyan-text z-depth-3">
+            <h3 class="center-align cyan-text">I am being Cyberbullied - How can I stop it?</h3>
+            <hr>
+            <br>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card-panel grey darken-4 z-depth-0">
+                        <h4 class="red-text text-lighten-2">Know what you are looking for</h4>
+                        Always be on the lookout for fraping, cyberstalking, harrassment and impersonation.
+                        Cyberbullies do not attack with a notice. An person can be victimised anywhere and anytime. It
+                        does
+                        not even matter if the victim and the bully are acquainted or not. <br>
+                        It is therefore important to know and understand the different types of cyberbullying.
+                        <br><br>To know more about the different types of cyberbulling, visit:
+                        <a href="{% url 'types_of_cyber_bullying' %}" class="btn grey darken-2 black-text z-depth-3">Types
+                            of Cyberbullying</a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col s12 m12 l12 ">
+                    <div class="card-panel grey darken-4 z-depth-0">
+                        <h4 class="red-text text-lighten-2">Take immediate action</h4>
+                        Attempt to identify the cause, stop responding to the bully's message. Save evidence in the form
+                        of screenshots or recordings before blocking the bully.
+                        After blocking the bully, do not forget to change your account settings.<br>
+                        We will provide you with brief counseling and you can also submit your complaint.<br><br>
+                        To know more, visit:
+                        <a href="{% url 'councelling' %}" class="btn grey darken-2 black-text z-depth-3">Report
+                            Complaint</a>
+
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card-panel grey darken-4 z-depth-0">
+                        <h4 class="red-text text-lighten-2">Get outside help</h4>
+                        Always remeber: Do not hesitate and wait too long to ask for help. This can lead to disastrous
+                        situations. If you are a child or a teenager, ask an adult for help.
+                        Often, talking it out with parents and teachers is the best solution.
+                        You can also report the bully to your service providers if he is taking the telecommunication
+                        way to bully you. If the problem is too large to be handled, then it is
+                        best to get the law enforcement involved. This is where this portal comes into play.
+                        <br>
+                        In case you have any doubt regarding the web portal, visit:
+                        <a href="{% url 'faq' %}" class="btn grey darken-2 black-text z-depth-3">FAQ Pagse</a>
+                    </div>
+                    <hr>
+                </div>
+
+            </div>
+        </div>
+        <!--Card end-->
+
+
+    </div>
+</div>
+{#<div class="row">#}
+{#    <div class="col s12 m12 l12">#}
+{##}
+{#        <!--Card start-->#}
+{#        <div class="card-panel grey darken-4 cyan-text z-depth-3">#}
+{#            <h3 class="center-align cyan-text">Facets of the website</h3>#}
+{#            <hr>#}
+{#            <br>#}
+{#            <ul style="list-style-type:disc"></ul>#}
+{#            <li><h5>Complaint registry:</h5> The user can input his or her problem in the portal's complaint section.#}
+{#                The input will be in the form of a text, describing the problem he or she is facing and against whom.#}
+{#            </li>#}
+{#            This will give a more profound evidence of when, how, where and by whom the victim was bullied.<br>#}
+{#            <li><h5>Ticket generation:</h5> A ticket will be generated for every complaint. This ticket will possess a#}
+{#                unique ID. This will help the consultant and the user to uniquely identify the complaint and track down#}
+{#                the progress made by the officials in solving the issue.<br>#}
+{#            <li><h5>Tags:</h5> Complaints will be classified on the basis of tags. This allows the officials to search#}
+{#                for problems on the basis of tags.#}
+{#            </li>#}
+{#            This will include a certain level of flexibility to the search process and the officials as well since they#}
+{#            can now search for tags in their area of expertise.<br>#}
+{#            <li><h5>Data analysis:</h5> Data will be analyzed on a regular basis and shown in the analytics dashboard.#}
+{#            </li>#}
+{#            Analytical data will include the location(s) and the tag(s) associated with the complaint<br>#}
+{#            This will help in identifying the areas which are infested with the heinous crime of cyberbullying<br>#}
+{#            This will also bring into our notice the types of cyberbullying occuring in those areas, including the#}
+{#            frequency at which the complaints are addressed and solved by the authorities.<br>#}
+{#            <li><h5>Messaging system:</h5>Email/sms will be sent with third party modules.</li>#}
+{#            <br>#}
+{#        </div>#}
+{#        <!--Card end-->#}
+{#        <a href="{% url 'cs1' %}" class="btn-large">Case Study</a>#}
+{#    </div>#}
+{#</div>#}
+
+
+<!--Start footer-->
+<footer class="page-footer footers" style="background:linear-gradient(to right, transparent,teal ,transparent); ">
+
+    <div class="container">
+        <div class="row">
+            <div class="col s6 m6">
+                <h3 class="contact white-text">Follow us at:</h3>
+                <a href="#"><img src="{% static 'img/google_bw.png' %}" class="responsive-img image" id="img"></a>
+                <a href="#"><img src="{% static 'img/facebook-logo.svg' %}" class="responsive-img image" id="img1"></a>
+                <a href="#"><img src="{% static 'img/insta_bw.png' %}" class="responsive-img image" id="img2"></a>
+                <a href="#"><img src="{% static 'img/twitter_bw.svg' %}" class="responsive-img image" id="img3"></a>
+                <h5 style="color:black;" class="white-text">Our partner : <a href="http://www.gujaratindia.com"
+                                                                             class="white-text">www.gujaratindia.com</a>
+                </h5>
+
+            </div>
+
+
+            <div class="col s6 m4" style="font-size: 100%">
+                <h2 style="color:black" class="white-text"> Important Links</h2>
+                <ul style="font-size:100%">
+                    <li><a href="https://india.gov.in/ " class="white-text">Government of India</a></li>
+                    <li><a href="http://www.gujarathelpline.com/ " class="white-text">Government of Gujrat</a></li>
+                    <li style="color:black" class="white-text">Toll free helpline: 1800-180-5522</li>
+                    <br>
+                    <li style="color:black;font-size: 100%;" class="white-text"><em>All rights reserved<em></li>
+                </ul>
+            </div>
+
+        </div>
+
+</footer>
+
+<!--End footer-->
+
+<!--Footer js-->
+<script type="text/javascript" src="{% static 'js/footer.js' %}"></script>
+<!--Footer js end-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
+    $(window).scroll(function () {
+        function elementScrolled(elem) {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+            var elemTop = $(elem).offset().top + 200;
+            return ((elemTop <= docViewBottom + 50) && (elemTop >= docViewTop));
+        }
+
+        if (elementScrolled('#codebase')) {
+            $('#one').fadeIn();
+        } else {
+                $('#one').fadeOut();
+        }
+
+        if (elementScrolled('#dashboard')) {
+            $('#two').fadeIn();
+        } else {
+                $('#two').fadeOut();
+        }
+
+        if (elementScrolled('#analytics')) {
+            $('#three').fadeIn();
+            $('#four').fadeIn();
+            $('#five').fadeIn();
+            $('#six').fadeIn();
+            $('#seven').fadeIn();
+        } else {
+                $('#three').fadeOut();
+                $('#four').fadeOut();
+                $('#five').fadeOut();
+                $('#six').fadeOut();
+                $('#seven').fadeOut();
+        }
+
+
+
+        if (elementScrolled('#product')) {
+            $('#one-product').fadeIn();
+            $('#two-product').fadeIn();
+            $('#three-product').fadeIn();
+            $('#four-product').fadeIn();
+            $('#five-product').fadeIn();
+            $('#six-product').fadeIn();
+            $('#seven-product').fadeIn();
+        } else {
+                $('#one-product').fadeOut();
+                $('#two-product').fadeOut();
+                $('#three-product').fadeOut();
+                $('#four-product').fadeOut();
+                $('#five-product').fadeOut();
+                $('#six-product').fadeOut();
+                $('#seven-product').fadeOut();
+        }
+
+    });
+</script>
+</body>
+</html>

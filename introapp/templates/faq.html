@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+   <head>
+        <style>
+           li{
+           color:white;
+           background-color:black;
+           }
+           .collapsible-header{
+           color:black;
+           }
+       </style>
+      <title>FAQ</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/loader.css' %}"/>
+      <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/random.css' %}"/>
+
+       <!--Import chart js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+       <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+   </head>
+
+   <body style="background-color:white;width:80%;margin-left:10%">
+
+
+   <nav style="background:linear-gradient(to right, grey, black)">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="{% url 'home' %}" class="waves-effect">Home</a></li>
+            <li><a href="{% url 'faq' %}" class="waves-effect">FAQ</a></li>
+            <li><a href="{% url 'types_of_cyber_bullying' %}" class="waves-effect">Types</a></li>
+            <li><a href="{% url 'complaints' %}" class="btn waves-effect">Fill Form</a></li>
+            <li><a href="{% url 'login' %}" class="btn waves-effect">Admin Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+      <h3 align="center" style="color:white">FAQ</h3>
+      <ul class = "collapsible" data-collapsible = "accordion" style="font-size:18px;">
+         <li>
+            <div class = "collapsible-header ">
+               <i class = "material-icons">filter_1</i>What is the process after the form flling?</div>
+            <div class = "collapsible-body"><p>Your Complaint will be forwared to the official and your problem will be solved as soon as possible. </p></div>
+         </li>
+
+         <li>
+            <div class = "collapsible-header">
+               <i class = "material-icons">filter_2</i>Can i stay Cyber-Safe and be protected by CyberBullying?</div>
+            <div class = "collapsible-body"><p>You can refuse to pass along cyberbullying messages. Tell friends to stop cyberbullying, block communication with cyberbullies, and report cyberbullying to a trusted adult. To stay cyber-safe, never post or share your personal information online or your friends’ personal information (this includes your full name, address, telephone number, school name, parents’ names or credit card number). Never share your Internet passwords with anyone and never meet face-to-face with someone you only met online.</p></div>
+         </li>
+
+          <li>
+            <div class = "collapsible-header">
+               <i class = "material-icons">filter_3</i>As A parent How can we make sure that our child is safe from CyberBullying. ?</div>
+            <div class = "collapsible-body"><p>The parent can start by teaching the child about social responsibility. Have the child imagine the situation in reverse. Cyberbullying can spiral to a massive level, even though cyberbullies may have just sent a post or text that initially started off as a joke. It is also important to teach this same lesson to cyberbullying victims, because many victims in turn can become cyberbullies themselves.</p></div>
+         </li>
+
+
+          <li>
+            <div class = "collapsible-header">
+               <i class = "material-icons">filter_4</i>Will my details be anonymous.?</div>
+            <div class = "collapsible-body"><p>You will be completely anonymous for another users.only admin can see your details.</p></div>
+         </li>
+
+           <li>
+            <div class = "collapsible-header">
+               <i class = "material-icons">filter_5</i>How can i keep track of my Complaint.?</div>
+            <div class = "collapsible-body"><p>After completing the form filling process you will recive a email regarding your Ticket ID and that ticket will be used to check where your complaint has reached.</p></div>
+         </li>
+
+           <li>
+            <div class = "collapsible-header">
+               <i class = "material-icons">filter_6</i>In how many stages my complaint will be processed.?</div>
+            <div class = "collapsible-body"><p>Your complaint will be processed in four stages.</p></div>
+         </li>
+
+
+          <li>
+            <div class = "collapsible-header">
+               <i class = "material-icons">filter_7</i>What are the four stages of complaint peogress.?</div>
+            <div class = "collapsible-body"><p>Accepted<br/>Under Investigation<br/>Reviewed<br/>Resolved
+</p></div>
+         </li>
+
+
+          <li>
+            <div class = "collapsible-header">
+               <i class = "material-icons">filter_8</i>What can people do to stop cyber-bullying?</div>
+            <div class = "collapsible-body"><p>People should make themselves aware of every aspects of cyberbullying and make sure that they take as much of preventions they can take.  </p></div>
+         </li>
+
+           <li>
+            <div class = "collapsible-header">
+               <i class = "material-icons">filter_9</i>What if i reported someone,will they know about me.?</div>
+            <div class = "collapsible-body"><p>NO,they won't know that you have registered a complain againts them.Feel free to share your problems regarding Cyberbul.</p></div>
+         </li>
+
+           <li>
+            <div class = "collapsible-header">
+               <i class = "material-icons">filter_9_plus</i>Will my parents be notified or told about my complaint.?</div>
+            <div class = "collapsible-body"><p>No,they won't until something is very serious.</p></div>
+         </li>
+
+
+      </ul>
+
+
+<footer class="page-footer" style="background:linear-gradient(to right, grey,black)">
+    <div>
+        <div class="row">
+            <div class="col l6 s12">
+                <h4 class="white-text">Scripters</h4>
+                <p class="grey-text text-lighten-4">"Quality over quantity".</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 Copyright text
+        </div>
+    </div>
+</footer>
+
+   </body>
+</html>

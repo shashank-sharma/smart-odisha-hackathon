@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <nav style="background:linear-gradient(to right, purple, indigo)">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="{% url 'home' %}" class="waves-effect">Home</a></li>
+
+                <li><a href="{% url 'types_of_cyber_bullying' %}" class="waves-effect">Types Of Cyber Bullying</a></li>
+
+                <li><a href="{% url 'report_complaint' %}" class="btn waves-effect">Report Complaint</a></li>
+                <li><a href="{% url 'login' %}" class="btn waves-effect">Admin Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="card-panel white darken-4 green-text z-depth-5" id="complaint_body" style="padding: 20px">
+                <h3 class="center-align">Latest Complaints</h3>
+                <hr>
+                <br>
+                {% for complaint in complaints %}
+                    <div class="card white">
+                        <div class="card-content">
+                            <p><a href="/complaints/details/{{ complaint.id }}"
+                                  class="card-title black-text">{{ complaint }}</a>
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <span>
+                            {% for tag in complaint.get_complaint_tags %}
+                                <div class="chip">
+                                      {{ tag }}
+                                  </div>
+                            {% endfor %}
+                            </span>
+                            <span class="" style="float: right;">{{ complaint.complaint_date }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        <button class="black white-text btn" id="get_complaints">More</button>
+        </div>
+    </div>
+    <footer class="page-footer" style="background:linear-gradient(to right, purple,indigo)">
+        <div>
+            <div class="row">
+                <div class="col l6 s12">
+                    <h4 class="white-text">Scripters</h4>
+                    <p class="grey-text text-lighten-4">"Quality over quantity".</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Copyright text
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+{% endblock %}

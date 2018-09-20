@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+
+        {% block title %}{% endblock %}
+    </title>
+
+    <!-- JS Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+
+    <!-- CSS Files -->
+    <link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+<ul id="slide-out" class="side-nav">
+    <li><a class="waves-effect" href="/">Home</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Account</a></li>
+    {% if user.is_authenticated %}
+    <li><a class="waves-effect" href="/user/logout">Log out</a></li>
+    {% else %}
+    <li><a class="waves-effect" href="/user/login">Login</a></li>
+    {% endif %}
+</ul>
+
+<div class="progress" id = "progress" style="position: relative;display: none;">
+  <div class="indeterminate"></div>
+</div>
+<nav>
+  <div class="nav-wrapper teal">
+    <div class="progress black" id="load" style="margin:0rem 0 0rem 0;">
+      <div class="indeterminate"></div>
+    </div>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="large material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="/">Home</a></li>
+      {% if user.is_authenticated %}
+      <li class="right"><a href = "" data-activates='dropdown0' class='dropdown-button'><i class="large material-icons">perm_identity</i></a></li>
+      <ul id='dropdown0' class='dropdown-content white'>
+        <li class="divider"></li>
+        <li><a href="/user/logout">Log out</a></li>
+      </ul>
+      {% else %}
+      <li><a href="/user/login">Log In</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+    {% block largepagecontent %} {% endblock %}
+    <div class="container" style="padding-bottom:40px; ">
+        {% block pagecontent %} {% endblock %}
+
+    </div>
+    <br><br><br><br><br><br>
+            <footer class="page-footer teal" style="bottom: 0">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">About</h5>
+                <p class="grey-text text-lighten-4">Django is Awesome</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">More Links</h5>
+                <ul>
+                  <li>Text1</li>
+                  <li>Text2</li>
+                  <li>Text3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            Made with Love by Scripters
+            <a class="grey-text text-lighten-4 right" href="#!">From India</a>
+            </div>
+          </div>
+        </footer>
+</body>
+</html>

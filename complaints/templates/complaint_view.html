@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h3 class="red center-align">{{complaint}}</h3>
+<div class="card">
+    <div class="card-content">
+       <h5>Name: </h5> {{complaint.full_name}}
+    </div>
+    <div class="card-content">
+       <h5>Email: </h5> {{complaint.email}}
+    </div>
+    <div class="card-content">
+       <h5>Subject: </h5> {{complaint.subject}}
+    </div>
+    <div class="card-content">
+      <h5>Complaint: </h5>  {{complaint.complaint}}
+    </div>
+    <div class="card-content">
+      <h5>Complaint against: </h5> {{complaint.complaint_against}}
+    </div>
+    <div class="card-action">
+      <h5>Complaint date: </h5>  {{complaint.complaint_date}}
+    </div>
+    <div class="card-content">
+      <h5>Tags: </h5>
+        {% for tag in complaint.get_complaint_tags %}
+         <div class="chip">
+           {{ tag }}
+            <i class="close material-icons">close</i>
+         </div>
+        {% endfor %}
+    </div>
+</div>
+<a href="/complaints" class="btn waves-effect">Go Back</a>
+{% endblock %}

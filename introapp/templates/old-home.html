@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/home.css' %}"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/loader.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Import chart js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+</head>
+<body>
+<!--Navbar-->
+<!-- style="background:linear-gradient(to right, grey, black)" -->
+<nav class="black">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="{% url 'home' %}" class="waves-effect">Home</a></li>
+            <li><a href="{% url 'types_of_cyber_bullying' %}" class="waves-effect">Types</a></li>
+            <li><a href="{% url 'councelling' %}" class="btn waves-effect">Report Complaint</a></li>
+            <li><a href="{% url 'login' %}" class="btn waves-effect">Admin Login</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="row">
+    <div class="col s12 l12 m12">
+        <h5 class="text white-text left-align" style="font-size: 24px">
+            Are you being bullied?
+            Allow us to help you overcome the ever-rising barrier of cyberbulling
+        </h5>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m12 l5">
+        <div class="card-panel grey darken-4 cyan-text z-depth-3" >
+            <h3 class="center-align cyan-text">What Does Cyberbullying Look Like?</h3>
+            <hr>
+            <br>
+            <ul style="list-style-type:disc"></ul>
+            <h5>Cyberbulling is an evil that appears in many forms, including:</h5><br>
+            <li>Abusive text messages and emails.</li>
+            <br>
+            <li>Forceful exclusion from social groups.</li>
+            <br>
+            <li>Online humiliation.</li>
+            <br>
+            <li>Online impersonation and frapping.</li>
+            <br>
+            <li>Trolling which is against moral rights.</li>
+            <br>
+            <li>Illegal and forceful entry to sensitive data without your permission.</li>
+        </div>
+    </div>
+    <div class="col s12 m6 l7" style="">
+        <!--Animation-->
+
+        <div class="grid hide-on-med-and-down main-animation">
+            <p class="one"><span class="s"></span></p>
+            <p class="two"><span class="s"></span></p>
+            <p class="three"><span class="s"></span></p>
+            <p class="four"><span class="s"></span></p>
+            <p class="five"><span class="s"></span></p>
+            <p class="six"><span class="s"></span></p>
+            <p class="seven"><span class="s"></span></p>
+        </div>
+
+        <!--Arrow images-->
+        <img class="hide-on-med-and-down" src="{% static 'img/step13.png' %}" style="margin-top:125px;padding-left:10px"
+             height=200px>
+
+        <img class="hide-on-med-and-down" src="{% static 'img/step11.png' %}"
+             style="margin-top:120px; margin-right:200px;" height=150px>
+
+        <!--Arrow images end-->
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 m12 l12">
+
+        <!--Card start-->
+        <div class="card-panel grey darken-4 cyan-text z-depth-3" >
+            <h3 class="center-align cyan-text">I am being Cyberbullied - How can I stop it?</h3>
+            <hr>
+            <br>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card-panel grey darken-4 z-depth-0">
+                        <h4 class="red-text text-lighten-2">Know what you are looking for</h4>
+                        Always be on the lookout for fraping, cyberstalking, harrassment and impersonation.
+                        Cyberbullies do not attack with a notice. An person can be victimised anywhere and anytime. It does
+                        not even matter if the victim and the bully are acquainted or not. <br>
+                        It is therefore important to know and understand the different types of cyberbullying.
+                        <br><br>To know more about the different types of cyberbulling, visit:
+                        <a href="{% url 'types_of_cyber_bullying' %}" class="btn grey darken-2 black-text z-depth-3">Types of Cyberbullying</a>
+                    </div><hr>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col s12 m12 l12 ">
+                    <div class="card-panel grey darken-4 z-depth-0">
+                        <h4 class="red-text text-lighten-2">Take immediate action</h4>
+                        Attempt to identify the cause, stop responding to the bully's message. Save evidence in the form
+                        of screenshots or recordings before blocking the bully.
+                        After blocking the bully, do not forget to change your account settings.<br>
+                        We will provide you with brief counseling and you can also submit your complaint.<br><br>
+                        To know more, visit:
+                        <a href="{% url 'councelling' %}" class="btn grey darken-2 black-text z-depth-3">Report Complaint</a>
+
+                    </div><hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card-panel grey darken-4 z-depth-0">
+                        <h4 class="red-text text-lighten-2">Get outside help</h4>
+                        Always remeber: Do not hesitate and wait too long to ask for help. This can lead to disastrous
+                        situations. If you are a child or a teenager, ask an adult for help.
+                        Often, talking it out with parents and teachers is the best solution.
+                        You can also report the bully to your service providers if he is taking the telecommunication
+                        way to bully you. If the problem is too large to be handled, then it is
+                        best to get the law enforcement involved. This is where this portal comes into play.
+                        <br>
+                        In case you have any doubt regarding the web portal, visit:
+                        <a href="{% url 'faq' %}" class="btn grey darken-2 black-text z-depth-3">FAQ Pagse</a>
+                    </div><hr>
+                </div>
+
+            </div>
+        </div>
+        <!--Card end-->
+
+
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 m12 l12">
+
+        <!--Card start-->
+        <div class="card-panel grey darken-4 cyan-text z-depth-3" >
+            <h3 class="center-align cyan-text">Facets of the website</h3>
+            <hr>
+            <br>
+            <ul style="list-style-type:disc"></ul>
+            <li><h5>Complaint registry:</h5> The user can input his or her problem in the portal's complaint section.
+                The input will be in the form of a text, describing the problem he or she is facing and against whom.
+            </li>
+            This will give a more profound evidence of when, how, where and by whom the victim was bullied.<br>
+            <li><h5>Ticket generation:</h5> A ticket will be generated for every complaint. This ticket will possess a
+                unique ID. This will help the consultant and the user to uniquely identify the complaint and track down
+                the progress made by the officials in solving the issue.<br>
+            <li><h5>Tags:</h5> Complaints will be classified on the basis of tags. This allows the officials to search
+                for problems on the basis of tags.
+            </li>
+            This will include a certain level of flexibility to the search process and the officials as well since they
+            can now search for tags in their area of expertise.<br>
+            <li><h5>Data analysis:</h5> Data will be analyzed on a regular basis and shown in the analytics dashboard.
+            </li>
+            Analytical data will include the location(s) and the tag(s) associated with the complaint<br>
+            This will help in identifying the areas which are infested with the heinous crime of cyberbullying<br>
+            This will also bring into our notice the types of cyberbullying occuring in those areas, including the
+            frequency at which the complaints are addressed and solved by the authorities.<br>
+            <li><h5>Messaging system:</h5>Email/sms will be sent with third party modules.</li>
+            <br>
+        </div>
+        <!--Card end-->
+        <a href="{% url 'cs1'  %}" class="btn-large">Case Study</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!--Start footer-->
+<footer class="page-footer footers" style="background:linear-gradient(to right, transparent,teal ,transparent); ">
+
+    <div class="container">
+        <div class="row">
+            <div class="col s6 m6">
+                <h3 class="contact white-text">Follow us at:</h3>
+                <a href="#"><img src="{% static 'img/google_bw.png' %}" class="responsive-img image" id="img"></a>
+                <a href="#"><img src="{% static 'img/facebook-logo.svg' %}" class="responsive-img image" id="img1"></a>
+                <a href="#"><img src="{% static 'img/insta_bw.png' %}" class="responsive-img image" id="img2"></a>
+                <a href="#"><img src="{% static 'img/twitter_bw.svg' %}" class="responsive-img image" id="img3"></a>
+                <h5 style="color:black;"class="white-text">Our partner : <a href="http://www.gujaratindia.com"class="white-text">www.gujaratindia.com</a>
+                </h5>
+
+            </div>
+
+
+            <div class="col s6 m4" style="font-size: 100%">
+                <h2 style="color:black"class="white-text"> Important Links</h2>
+                <ul style="font-size:100%">
+                    <li><a href="https://india.gov.in/ " class="white-text">Government of India</a></li>
+                    <li><a href="http://www.gujarathelpline.com/ " class="white-text">Government of Gujrat</a></li>
+                    <li style="color:black"class="white-text">Toll free helpline: 1800-180-5522</li>
+                    <br>
+                    <li style="color:black;font-size: 100%;"class="white-text"><em>All rights reserved<em></li>
+                </ul>
+            </div>
+
+        </div>
+
+</footer>
+
+<!--End footer-->
+
+<!--Footer js-->
+<script type="text/javascript" src="{% static 'js/footer.js' %}"></script>
+<!--Footer js end-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+</html>

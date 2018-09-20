@@ -1,0 +1,153 @@
+{% extends 'types_layout.html' %}
+{% load static %}
+<!--Navbar end-->
+<!--page layout start-->
+{% block title %}
+    Frapping
+{% endblock %}
+{% block pagecontent %}
+    <div class="row">
+
+        <div class="col s12 m4 l4"> <!-- Note that "m4 l4" was added -->
+            <!-- Grey navigation panel
+
+                  This content will be:
+              4-columns-wide on large screens,
+              4-columns-wide on medium screens,
+              12-columns-wide on small screens  -->
+
+            <div>
+                <!--Canvas of radar-->
+                <canvas id="myChart" height=380px></canvas>
+                <script>
+                    var ctx = document.getElementById("myChart").getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'horizontalBar',
+                        data: {
+                            labels: ["Madhya Pradesh", "Uttar Pradesh", "Chhattisgarh", "Himachal Pradesh", "Andhra Pradesh", "Arunachal Pradesh", "Uttrakhand", "Mizoram", "Tripura", "Assam", "Telangana", "Hyderabad", "Tamil Nadu", "Karnataka", "Kerala", "Delhi", "Maharashtra", "Goa", "Jammu and Kashmir", "Haryana", "Rajasthan", "Gujarat", "West Bengal", "Jharkhand", "Sikkim", "Andaman and Nicobar Islands"],
+                            datasets: [{
+                                label: 'Number of registered complaints',
+                                data: [220, 321, 345, 224, 156, 327, 769, 790, 906, 862, 989, 1090, 1330, 1562, 1123, 976, 846, 476, 611, 1578, 1046, 454, 108, 1678, 998, 542],
+                                borderWidth: 1,
+                                backgroundColor: 'rgba(00,00,00,0.5)',
+                                borderColor: 'black'
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                </script>
+                <!--End radar-->
+            </div>
+        </div>
+
+
+        <div class="col s12 m8 l8"> <!-- Note that "m8 l8" was added -->
+            <!-- Teal page content
+
+              This content will be:
+              4-columns-wide on large screens,
+              8-columns-wide on medium screens,
+              12-columns-wide on small screens  -->
+
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
+                </p><br>
+                <canvas id="myCharts" height="100%"></canvas>
+                <script>
+                    var ctx = document.getElementById("myCharts").getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"],
+                            datasets: [{
+                                label: 'Number of registered complaints (per year in thousands)',
+                                data: [1400, 2432, 2355, 3424, 5342, 1000, 2424, 3456, 7866, 5432, 1342],
+                                borderWidth: 1,
+                                backgroundColor: 'rgba(255,00,00,0)',
+                                borderColor: 'red'
+                            }, {
+                                label: 'Number of registered complaints (per year in thousands)',
+                                data: [700, 1342, 1325, 2788, 989, 410, 1534, 3009, 6454, 876],
+                                borderWidth: 1,
+                                backgroundColor: 'rgba(255,00,00,0)',
+                                borderColor: 'green'
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                </script>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <hr>
+    <div class="parallax-container">
+        <div class="parallax"><img src="{% static 'img/frappingimage.png' %}"></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header"></h2>
+            <p class="grey-text text-darken-3 lighten-3">
+            <h1>Frapping</h1>
+            <h5>Fake profiles can be created in order for a person to hide their real identity with the intention of
+                cyberbullying you.</h5></br>
+            <h5>The cyberbully might also use someone else’s email or mobile phone to cyberbully you.</h5></br>
+            <h5>This would make it appear as if someone else has sent the threats.</h5></br>
+            <h5>The cyberbully is afraid in case their identity is revealed, therefore they choose to use fake
+                accounts. </h5>
+            <h5>This usually means that the cyberbully is someone that you know very well, because if you didn’t know
+                them,
+                the perpetrator wouldn’t have to hide their identity.</h5>
+            </p>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="{% static 'img/frappingimg.png' %}"></div>
+    </div>
+{% endblock %}
+{% block footercontent %}
+    <a href="{% url 'type_cyberstalking' %}">
+        <h4 class="white-text">Next: Cyber stalking<i class="material-icons">arrow_forward</i>
+            <hr>
+        </h4>
+    </a>
+{% endblock %}

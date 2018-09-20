@@ -1,0 +1,306 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url("/static/img/bg.jpg");
+    perspective: 3000;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+@-webkit-keyframes sinusoidone {
+    0%, 50% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation-timing-function: cubic-bezier(.2, .25, .55, 1);
+        animation-timing-function: cubic-bezier(.2, .25, .55, 1)
+    }
+    25% {
+        -webkit-transform: translateZ(-7px);
+        transform: translateZ(-7px);
+        -webkit-animation-timing-function: cubic-bezier(.45, 0, .8, .75);
+        animation-timing-function: cubic-bezier(.45, 0, .8, .75)
+    }
+    75% {
+        -webkit-transform: translateZ(7px);
+        transform: translateZ(7px);
+        -webkit-animation-timing-function: cubic-bezier(.45, 0, .8, .75);
+        animation-timing-function: cubic-bezier(.45, 0, .8, .75)
+    }
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+@-webkit-keyframes sinusoidtwo {
+    0%, 50% {
+        -webkit-transform: translateZ(100px);
+        transform: translateZ(100px);
+        -webkit-animation-timing-function: cubic-bezier(.2, .25, .55, 1);
+        animation-timing-function: cubic-bezier(.2, .25, .55, 1)
+    }
+    25% {
+        -webkit-transform: translateZ(107px);
+        transform: translateZ(107px);
+        -webkit-animation-timing-function: cubic-bezier(.45, 0, .8, .75);
+        animation-timing-function: cubic-bezier(.45, 0, .8, .75)
+    }
+    75% {
+        -webkit-transform: translateZ(107px);
+        transform: translateZ(107px);
+        -webkit-animation-timing-function: cubic-bezier(.45, 0, .8, .75);
+        animation-timing-function: cubic-bezier(.45, 0, .8, .75)
+    }
+    to {
+        -webkit-transform: translateZ(100px);
+        transform: translateZ(100px)
+    }
+}
+
+@-webkit-keyframes sinusoidthree {
+    0%, 50% {
+        -webkit-transform: translateZ(200px);
+        transform: translateZ(200px);
+        -webkit-animation-timing-function: cubic-bezier(.2, .25, .55, 1);
+        animation-timing-function: cubic-bezier(.2, .25, .55, 1)
+    }
+    25% {
+        -webkit-transform: translateZ(207px);
+        transform: translateZ(207px);
+        -webkit-animation-timing-function: cubic-bezier(.45, 0, .8, .75);
+        animation-timing-function: cubic-bezier(.45, 0, .8, .75)
+    }
+    75% {
+        -webkit-transform: translateZ(207px);
+        transform: translateZ(207px);
+        -webkit-animation-timing-function: cubic-bezier(.45, 0, .8, .75);
+        animation-timing-function: cubic-bezier(.45, 0, .8, .75)
+    }
+    to {
+        -webkit-transform: translateZ(200px);
+        transform: translateZ(200px)
+    }
+}
+
+.grid {
+    position: absolute;
+    top: 360px;
+    width: 1060px;
+    transform: rotateX(60deg) rotateZ(-50deg);
+    transform-style: preserve-3d;
+}
+
+.grid p {
+    float: left;
+    margin: 20px;
+    list-style-type: none;
+    background-size: 0, cover;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+.s {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.5);
+    transform: translateZ(-50px);
+}
+
+.one {
+    height: 400px;
+    width: 525px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/code.png");
+    position: absolute;
+    -webkit-animation: sinusoidone 3s ease infinite;
+    animation-delay: -.7s;
+}
+
+.two {
+    height: 400px;
+    width: 525px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/admin.png");
+    transform: translate(100px, -100px);
+    z-index: 2;
+    -webkit-animation: sinusoidtwo 3s ease infinite;
+    animation-delay: -.6s;
+}
+
+.three {
+    top: 100px;
+    left: 100px;
+    height: 100px;
+    width: 145px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/card1.png");
+    transform: translate(200px, -200px);
+    z-index: 3;
+    -webkit-animation: sinusoidthree 3s ease infinite;
+    animation-delay: -.5s;
+}
+
+.four {
+    top: 100px;
+    left: 260px;
+    height: 100px;
+    width: 155px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/card2.png");
+    transform: translate(200px, -200px);
+    z-index: 3;
+    -webkit-animation: sinusoidthree 3s ease infinite;
+    animation-delay: -.4s;
+}
+
+.five {
+    top: 100px;
+    left: 430px;
+    height: 100px;
+    width: 155px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/card3.png");
+    transform: translate(200px, -200px);
+    z-index: 3;
+    -webkit-animation: sinusoidthree 3s ease infinite;
+    animation-delay: -.3s;
+}
+
+.six {
+    top: 250px;
+    left: 100px;
+    height: 160px;
+    width: 275px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/card5.png");
+    transform: translate(200px, -200px);
+    z-index: 3;
+    -webkit-animation: sinusoidthree 3s ease infinite;
+    animation-delay: -.2s;
+}
+
+.seven {
+    top: 230px;
+    left: 390px;
+    height: 230px;
+    width: 175px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/card6.png");
+    transform: translate(200px, -200px);
+    z-index: 3;
+    -webkit-animation: sinusoidthree 3s ease infinite;
+    animation-delay: -.1s;
+}
+
+.received {
+    top: 100px;
+    left: 100px;
+    height: 100px;
+    width: 145px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/received.png");
+    transform: translate(200px, -200px);
+    z-index: 3;
+    -webkit-animation: sinusoidthree 3s ease infinite;
+    animation-delay: -.5s;
+}
+
+.accepted {
+    top: 100px;
+    left: 260px;
+    height: 100px;
+    width: 155px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/accepted.png");
+    transform: translate(200px, -200px);
+    z-index: 3;
+    -webkit-animation: sinusoidthree 3s ease infinite;
+    animation-delay: -.4s;
+}
+
+.investigation {
+    top: 100px;
+    left: 430px;
+    height: 100px;
+    width: 155px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/investigation.png");
+    transform: translate(200px, -200px);
+    z-index: 3;
+    -webkit-animation: sinusoidthree 3s ease infinite;
+    animation-delay: -.3s;
+}
+
+.resolved {
+    top: 250px;
+    left: 100px;
+    height: 160px;
+    width: 275px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/resolved.png");
+    transform: translate(200px, -200px);
+    z-index: 3;
+    -webkit-animation: sinusoidthree 3s ease infinite;
+    animation-delay: -.2s;
+}
+
+.final {
+    top: 230px;
+    left: 390px;
+    height: 230px;
+    width: 175px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("/static/img/final.png");
+    transform: translate(200px, -200px);
+    z-index: 3;
+    -webkit-animation: sinusoidthree 3s ease infinite;
+    animation-delay: -.1s;
+}
+
+.text {
+    font-family: monospace;
+    font-size: 1.6vw;
+    width: 69em;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: type 5s steps(60, end);
+    animation: type 5s steps(60, end);
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes type {
+    from {
+        width: 0;
+    }
+}
+
+.responsive {
+    width: 80%;
+}
+
+.main-animation {
+    position: fixed;
+    right: 0;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+   <head>
+       <style>
+            .row{
+  display: flex;
+  position: absolute;
+  top: 10;
+
+  height: 100%;
+  width: 100%;
+}
+       </style>
+      <title>Report Complaint</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/loader.css' %}"/>
+      <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/random.css' %}"/>
+
+       <!--Import chart js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+       <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+   </head>
+ <body >
+
+
+   <nav style="background:linear-gradient(to right, grey, black)">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="#" class="waves-effect">Home</a></li>
+            <li><a href="{% url 'councelling' %}" class="waves-effect">Report Complaint</a></li>
+            <li><a href="{% url 'faq' %}" class="waves-effect">FAQ</a></li>
+            <li><a href="{% url 'cs1' %}" class="waves-effect">Case Study</a></li>
+            <li><a href="{% url 'complaint_status_form' %}" class="btn waves-effect">Check Status</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col s12 m12">
+      <div class="card-panel grey darken-4 " style="font-size:25px">
+        <div class="card-content cyan-text">
+            <span class=" card-title center white-text"><h1>OUTING</h1></span>
+            <img src="{% static 'img/case2.jpg' %}" alt="outing" class="responsive-img" style="height:50%;width:50%;margin-left:25%">
+            <ul>
+                <li><span class="white-text">Date:</span> 2017<li><br/>
+                <li><span class="white-text">Victim:</span> Uber Employees</li><br/>
+            <li><p>Incidence: fornication between employees Uber CEO listed guidelines for sex between employees ahead of company's 2013 Miami outing The email, obtained by Recode, is
+							  internally called the 'Miami letter' and essentially serves as a saucy rulebook for the then 400 employees at the company, who were headed to Floridas Shore Club for
+                what was a party-focussed celebration</p></li>
+            </ul>
+
+        </div>
+
+          <div class="card-action">
+          <a href="{% url 'cs3' %}" class="btn">PHISHING</a>
+
+        </div>
+           </div>
+
+      </div>
+    </div>
+  </div>
+
+
+   </body>
+</html>

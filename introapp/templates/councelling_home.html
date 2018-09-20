@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>CyberBullying Home</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/councelling_home.css' %}">
+</head>
+<body>
+    <div class="top">
+        <h4 class="white-text center-align">Select your age group</h4>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{% static 'img/kids.jpg' %}" >
+                    </div>
+                    <div class="card-content">
+                        <a class="waves-effect waves-light btn but" href="/councelling/kids"><i class="material-icons right">arrow_forward</i>Kid</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{% static 'img/teen_2.jpg' %}">
+                    </div>
+                    <div class="card-content">
+                        <a class="waves-effect waves-light btn but" href="/councelling/teen"><i class="material-icons right">arrow_forward</i>Teen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{% static 'img/adult_2.png' %}">
+                    </div>
+                    <div class="card-content">
+                        <a class="waves-effect waves-light btn but" href="/councelling/adult"><i class="material-icons right">arrow_forward</i>Adult</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

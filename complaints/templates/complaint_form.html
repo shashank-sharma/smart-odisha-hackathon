@@ -1,0 +1,95 @@
+{#{% extends 'layout.html' %}#}
+{##}
+{#{% block content %}#}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="{% static 'js/complaints.js' %}"></script>
+    <script src="{% static 'js/loader.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/complaint_form.css' %}">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div class="container">
+<h3 class="cyan-text">Complaint Form</h3>
+<form method="post" enctype="multipart/form-data" id="submit_complaint">
+    {% csrf_token %}
+    <div class="row">
+                        <div class="col s12 m3">
+                </div>
+        <div class="col s12 m8">
+            <div class="row">
+                <div class="input-field col s8">
+                    <label class="active white-text" for="full_name">Full Name</label>
+                    {{ form.full_name }}
+                </div>
+                <div class="input-field col s8">
+                    {{ form.gender }}
+                    <label>Gender</label>
+                </div>
+                <div class="col s8">
+                    <label class="active white-text" for="date_of_birth">Date of Birth</label>
+                    <i class="material-icons right">event</i>
+                    {{ form.date_of_birth }}
+                </div>
+                <div class="input-field col s8">
+                    {{ form.phone_number }}
+                    <label class="active white-text" for="phone_number">Phone Number</label>
+                </div>
+                <div class="input-field col s8">
+                    {{ form.email }}
+                    <label class="active white-text" for="email">Email</label>
+                </div>
+                <div class="input-field col s8">
+                    {{ form.state }}
+                    <label class="active white-text" for="state">State</label>
+                </div>
+                <div class="input-field city col s8" id="city">
+                    {{ form.city }}
+                    <label class="active white-text" for="city">City</label>
+                </div>
+                <div class="input-field col s8">
+                    {{ form.subject }}
+                    <label class="active white-text" for="subject">Subject</label>
+                </div>
+                <div class="input-field col s8">
+                    {{ form.complaint }}
+                    <label class="active white-text" for="complaint">Complaint</label>
+                </div>
+                <div class="input-field col s8">
+                    {{ form.complaint_against }}
+                    <label class="active white-text" for="complaint_against">Complaint Against</label>
+                </div>
+                <div class="input-field col s8" style="display: none;">
+                    {{ form.complaint_tag }}
+                </div>
+                <div class="col s8">
+                    <p class="caption white-text">Tags</p>
+                    <div class="chips chips-autocomplete"></div>
+                </div>
+                <br>
+                <div class="col s8">
+                    <div class="g-recaptcha" data-sitekey="6Le9FWoUAAAAAGajmTHTZfhSwutTTZ8QW2s17scZ"></div>
+                </div>
+                <br><br>
+                <div class="col s8">
+                    <button type="submit" id="submit" class="btn">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col s6">
+        </div>
+</form>
+</div>
+</body>
+</html>
+{#{% endblock %}#}

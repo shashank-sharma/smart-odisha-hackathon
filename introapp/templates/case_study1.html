@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+   <head>
+       <style>
+            .row{
+  display: flex;
+  position: absolute;
+  top: 10;
+
+  height: 100%;
+  width: 100%;
+}
+       </style>
+      <title>Report Complaint</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/loader.css' %}"/>
+      <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/random.css' %}"/>
+
+       <!--Import chart js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+       <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+   </head>
+ <body >
+
+
+   <nav style="background:linear-gradient(to right, grey, black)">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active"><a href="#" class="waves-effect">Home</a></li>
+            <li><a href="{% url 'councelling' %}" class="waves-effect">Report Complaint</a></li>
+            <li><a href="{% url 'faq' %}" class="waves-effect">FAQ</a></li>
+            <li><a href="{% url 'cs1' %}" class="waves-effect">Case Study</a></li>
+            <li><a href="{% url 'complaint_status_form' %}" class="btn waves-effect">Check Status</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col s12 m12">
+      <div class="card-panel grey darken-4 " style="font-size:25px">
+        <div class="card-content cyan-text">
+            <span class="card-title center"><h1>HARASSMENT</h1></span>
+<img src="{% static 'img/case1.jpg' %}" alt="outing" class="responsive-img" style="height:50%;width:50%;margin-left:25%">
+           <ul>
+               <li><p><span class="white-text">Victim:</span>  A women</p></li>
+               <li><p><span class="white-text">Date:</span> 2004</p></li>
+               <li><p><span class="white-text">Incidence:</span> Sexual harassment</p></li>
+               <li><p>Vijay Nair sexual harassment case: Rising incidents against men emphasise need for gender-neutral laws in Inda Vijay Nair, a Mumbai-based entrepreneur
+							 and founder of Only Much Louder (OML). The article, which has since gone viral, describes in detail the ordeal faced by Nair for months, which started
+							 with someone anonymously posting a sexually explicit tweet on his Twitter profile. What followed were a series of sexually explicit messages sent by the
+							 cyberstalker to Nair over Whatsapp and email, many of which were also copied to Nair’s friends and acquaintances. When Nair finally unmasked the identity
+							 of his stalker, it was discovered that the stalker in question was a woman whom Nair was acquainted with. The cyberstalking incident involving Nair is not
+							 a lone incident of a man being sexually harassed by a woman. Sexual harassment incidents committed against men (with the perpetrator being a woman) are
+                increasingly being reported and make one wonder whether we need gender neutral sexual harassment laws in India.</p></li>
+               </ul>
+        </div>
+
+          <div class="card-action">
+              <a href="{% url 'cs2' %}"><span class="grey-text btn">OUTING</span></a>
+
+        </div>
+           </div>
+
+      </div>
+    </div>
+  </div>
+
+
+   </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title>Complaint View</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/complaint.css' %}">
+    <script type="text/javascript" src="{% static 'js/complaint.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/complaints.js' %}"></script>
+</head>
+
+<body>
+<aside>
+    <div class="container" id="side">
+        <!-- TODO: Make side nav collapsible -->
+        <ul class="sidenav sidenav-fixed">
+            {% block sideheader %}
+            {% endblock %}
+            <li class="collapsible">
+                <a class="waves-effect waves-green custom" href="#">
+                    <i class="material-icons">archive</i> View Complaints
+
+                </a>
+            </li>
+            {% block sidecontent %}
+            {% endblock %}
+            <li class="collapsible">
+                <a href="{% url 'profile' %}" style="text-decoration: none;color: black;">
+                    <div class="collapsible-header waves-effect waves-green">
+                        <i class="material-icons">
+                            face
+                        </i> Profile
+                    </div>
+                </a>
+            </li>
+            <li class="collapsible">
+                <a href="{% url 'logout' %}" style="text-decoration: none;color: black;">
+                    <div class="collapsible-header waves-effect waves-green">
+                        <i class="material-icons">
+                            exit_to_app
+                        </i> Logout
+
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
+<div class="cust">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+
+</html>

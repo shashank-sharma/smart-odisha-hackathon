@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Import my css-->
+    <link rel="stylesheet" href="{% static 'css/randombully.css' %}">
+    <!--Import chart js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Types of cyber bullying</title>
+</head>
+<body>
+<!--Navbar(will be 12 columns wide on all screens)-->
+<nav style="background-color: black">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{% url 'home' %}" class="waves-effect">Home</a></li>
+            <li class="active"><a href="{% url 'types_of_cyber_bullying' %}" class="waves-effect">Types</a></li>
+            <li><a href="{% url 'report_complaint' %}" class="btn grey darken-4 waves-effect">Report Complaint</a></li>
+            <li><a href="{% url 'login' %}" class="btn grey darken-4 waves-effect">Admin Login</a></li>
+        </ul>
+    </div>
+</nav>
+<!--Navbar end-->
+<!--page layout start-->
+<div class="row">
+    <div class="col s12 m4 l4"> <!-- Note that "m4 l4" was added -->
+        <!-- Grey navigation panel
+              This content will be:
+          4-columns-wide on large screens,
+          4-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+        <div>
+            <!--Canvas of radar-->
+            <canvas id="myChart" height=380px></canvas>
+            <script>
+                var ctx = document.getElementById("myChart").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ["Exclusion", "Fraping", "Fake Profile", "Cyber Stalking", "Outing", "Harrassment", "Trolling", "Cat Phishing", "Trickery", "Dissing", "Flaming", "Degeneration", "Child Pornography", "Roasting", "Image-based abuse"],
+                        datasets: [{
+                            label: 'Registered Complaints (in thousands)',
+                            data: [10, 115, 20, 70, 80, 5, 100, 20, 70, 65, 43, 23, 12, 34, 23],
+                            borderWidth: 2,
+                            borderColor: 'cyan',
+                            backgroundColor: 'rgba(0,0,0,0.1)'
+                        }]
+                    },
+                });
+            </script>
+            <!--End radar-->
+        </div>
+    </div>
+
+    <div class="col s12 m8 l8"> <!-- Note that "m8 l8" was added -->
+        <!-- Teal page content
+          This content will be:
+          4-columns-wide on large screens,
+          8-columns-wide on medium screens,
+          12-columns-wide on small screens  -->
+        <div class="col s12 m12 l12" style="width:100%; height:580px">
+            <h5 class="white-text flow-text">
+                For decades now the internet has been bringing people together. Gone are the days
+                when friendships would have to be sacrificed after graduation and families were obliged to be based in
+                the same cities the
+                internet has revolutionised the ways in which we interact, and it would appear that everyone is making
+                the most of it. <br><br>
+                It has been a steadily growing phenomenon, with the rise of 3G, online shopping and blogging all
+                revolutionising the everyday lives of millions, but in recent years, one of the biggest talking points
+                has been the rise of social networking. <br>
+                <br>Social media giants such as Facebook, Twitter and MySpace have infiltrated every corner of modern
+                life. They have altered the ways in which information is exchanged, relationships are formed and free
+                time is spent.
+                <br><br>They have provided untold possibilities for the online world and yet as the internet has aged and
+                its users have begun to adapt, a darker underworld has emerged, and it appears to be here for good.
+            </h5>
+        </div>
+    </div>
+    </div>
+<hr>
+<div class="parallax-container">
+    <div class="parallax"><img src="{% static 'img/cbully.jpg' %}"></div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h2 class="header"></h2>
+        <p class="grey-text text-darken-3 lighten-3">
+        <h2>Types of cyberbullying</h2>
+        <hr>
+        <div class="col s12 m12 l12"><ul style="font-size:20px;">
+            <li style="list-style-type: disc;"><h3>Harassment</h3></li>
+            <p>Harassment covers a wide range of behaviors of an offensive nature. It is commonly understood as behavior
+                that disturbs or upsets, and it is characteristically repetitive. In the legal sense, it is behavior
+                that appears to be disturbing or threatening.</p>
+        </ul>
+        </div>
+        <div class="col s12 m12 l12"><ul style="font-size:20px;">
+            <li style="list-style-type: disc;"><h3>Exclusion</h3></li>
+            <p>Exclusion is a cyber bullying tactic that is highly effective and indirectly sends a provocative message
+                to the target
+                child without the need for actual verbal deprecation. As its well-known children and teens are
+                developmentally fixated on being recognized by
+                their peers, the process of designating who is a member of the peer group and who is not included can be
+                devastating to the target child.</p>
+        </ul>
+        </div>
+        <div class="col s12 m12 l12"><ul style="font-size:20px;">
+            <li style="list-style-type: disc;"><h3>Image-based abuse</h3></li>
+            <p>Image-based abuse (IBA) occurs when intimate, nude or sexual images are distributed
+                without the consent of those pictured. This includes real, altered (e.g. Photoshopped) and drawn
+                pictures and videos.
+                While most image-based abuse is about the sharing of images without consent, it can also include the
+                threat of an image being shared.</p>
+        </ul>
+        </div>
+        <div class="col s12 m12 l12"><ul style="font-size:20px;">
+            <li style="list-style-type: disc;"><h3>Flaming</h3></li>
+            <p>
+                Flaming is a term describing an online passionate argument that frequently includes profane or vulgar
+                language,
+                that typically occurs in public communication environments for peer bystanders to witness including
+                discussion
+                boards and groups, chatrooms and newsgroups. Flaming may have features of a normal message, but its
+                intent if designed differently.</p>
+        </ul>
+        </div>
+        <div class="col s12 m12 l12"><ul style="font-size:20px;">
+            <li style="list-style-type: disc;"><h3>Fraping</h3></li>
+            <p>A 'Frape' or 'Fraping' (a combination of 'Facebook' and 'rape') is when someone has used your Facebook
+                account without
+                permission and destroyed comments or pictures, or created new and offensive comments and pictures
+                pretending to be you.</p>
+        </ul>
+        </div>
+        <div class="col s12 m12 l12"><ul style="font-size:20px;">
+            <li style="list-style-type: disc;"><h3>Phishing</h3></li>
+            <p>Phishing is a cyber bully tactic that requires tricking, persuading or manipulating the target child into
+                revealing personal
+                and/or financial information about themselves and/or their loved ones. Once the cyber bully acquires
+                this information, they
+                begin to use the information to access their profiles if it may be the target child's password,
+                purchasing unauthorized
+                items with the target child's or
+                parents credit cards.</p>
+        </ul>
+        </div>
+        <div class="col s12 m12 l12"><ul style="font-size:20px;">
+            <li style="list-style-type: disc;"><h3>Cyber Stalking</h3></li>
+            <p>Cyberstalking is a form of harassment. Normally messages are sent through personal communications, such
+                as email or text messages. Victims start to believe that the cyberstalking may escalate to real
+                stalking.</p>
+        </ul>
+        </div>
+        <div class="col s12 m12 l12"><ul style="font-size:20px;">
+            <li style="list-style-type: disc;"><h3>Trolling</h3></li>
+            <p>The art of deliberately, cleverly, and secretly pissing people off, usually via the internet, using
+                dialogue.
+                Trolling does not mean just making rude remarks: Shouting swear words
+                at someone doesn't count as trolling; it's just flaming, and isn't funny. Spam isn't trolling either; it
+                pisses people off, but it's lame.</p>
+        </ul>
+        </div>
+        <div class="col s12 m12 l12"><ul style="font-size:20px;">
+            <li style="list-style-type: disc;"><h3>Impersonation</h3></li>
+            <p>Impersonation or "imping" as a tactic in cyber bullying can only occur with the "veil of anonymity"
+                offered by
+                digital technology. Cyber bullies impersonate the target child and make unpopular online comments on
+                social networking
+                sites and in chat rooms. Using impersonation, cyber bullies
+                set up websites that include vitriolic information leading to the target child being ostracized or
+                victimized
+                in more classic bullying ways.</p>
+        </ul>
+        </div>
+        <div class="col s12 m12 l12"><ul style="font-size:20px;">
+            <li style="list-style-type: disc;"><h3>Outing</h3></li>
+            <p>Outing is a term that includes the public display, posting, or forwarding of personal communication or
+                images by the cyber
+                bully personal to the target child. Outing becomes even more detrimental to the target
+                child when the communications posted and displayed publicly contains sensitive personal information or
+                images that are sexual in nature.</p>
+        </ul>
+        </div>
+    </div>
+</div>
+</div>
+<div class="parallax-container">
+    <div class="parallax"><img src="{% static 'img/bully.jpg' %}"></div>
+</div>
+<!--Start footer-->
+
+
+<!--End footer-->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.parallax').parallax();
+    });</script>
+</body>
+</html>
+

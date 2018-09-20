@@ -1,0 +1,105 @@
+{% extends 'official_base.html' %}
+{% block sideheader %}
+    <li>
+        <div class="user-view">
+            <div class="background">
+                {% if profile.image %}
+                    <img src="{{ profile.image }}" style="width: 12vh;" class="circle">
+                {% else %}
+                    None
+                {% endif %}
+            </div>
+            <div class="container name">
+                <h5>{{ user.username }}</h5>
+            </div>
+        </div>
+    </li>
+{% endblock %}
+{% block sidecontent %}
+    <li>
+        <ul class="collapsible expandable">
+            <li>
+                <div class="collapsible-header waves-effect waves-green">
+                    <i class="material-icons">forum</i>Update Status
+
+                    <i class="material-icons right arow">arrow_drop_down</i>
+                </div>
+                <div class="collapsible-body gray">
+                    <ul>
+                        <li>
+                            {% if not complaint.taken %}
+                                <a href="#" id="complaint_accept">
+                                    <i class="material-icons cyan" id="accept">check</i> Accept
+                                </a>
+                            {% else %}
+                                {% if user.username == complaint.complaint_taken_by.username %}
+                                    <a href="javascript:void(0);"><i class="material-icons cyan">check</i> Accepted by you</a>
+                                    {% else %}
+                                    <a href="javascript:void(0);"><i class="material-icons cyan">check</i> Someone else Accepted it</a>
+                                {% endif %}
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if not complaint.resolved %}
+                                <a href="javascript:void(0);" id="complaint_resolve">
+                                    <i class="material-icons green" id="resolve">done_all</i> Mark Resolve
+                                </a>
+                            {% else %}
+                                {% if user.username == complaint.complaint_taken_by.username %}
+                                    <a href="javascript:void(0);"><i class="material-icons green">done_all</i> Resolved by you</a>
+                                    {% else %}
+                                    <a href="javascript:void(0);"><i class="material-icons green">done_all</i> Resolved by someone else</a>
+                                    {% endif %}
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </li>
+{% endblock %}
+{% block content %}
+    <nav class="green">
+        <div class="top-text">Report</div>
+    </nav>
+    <div class="container complaint">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card">
+                    <div class="card-image">
+                        <i class="material-icons circle large">card_travel</i>
+                        <h4 class="tag right">Tags:</h4> {% for tag in complaint.get_complaint_tags %}
+                        <div class="chip">
+                            {{ tag }}
+                        </div>
+                    {% endfor %}
+                    </div>
+                    <div class="card-content">
+                        <h5>Subject: </h5> {{ complaint.subject }}
+                    </div>
+                    <div class="card-content">
+                        <h5>Complaint: </h5> {{ complaint.complaint }}
+                    </div>
+                    <div class="card-content">
+                        <h5>Complaint against: </h5> {{ complaint.complaint_against }}
+                        <a href="#" class="activator"><i class="material-icons right medium">details</i></a>
+                    </div>
+                    <div class="card-reveal">
+                        <div class="card">
+                            <span class="card-title"><i class="material-icons right medium">close</i></span>
+                            <div class="card-content">
+                                <h5>Name: </h5> {{ complaint.full_name }}
+                            </div>
+                            <div class="card-content">
+                                <h5>Email: </h5> {{ complaint.email }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h5>Complaint date: </h5> {{ complaint.complaint_date }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

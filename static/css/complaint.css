@@ -1,0 +1,87 @@
+.arow
+{
+  margin-right: 0 !important;
+  margin-left: 80px !important;
+}
+#side
+{
+  height:100%;
+  position: fixed;
+  width:20%;
+  border-style: solid;
+  top:0;
+  min-width: 300px;
+}
+.background
+{
+  overflow: hidden;
+position: relative;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+/*z-index: -1;*/
+width:50%;
+}
+.name
+{
+  /*border:2px solid gray;*/
+  text-align: center;
+      /*box-shadow: 0 2px 2px 0 rgba(3,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);*/
+}
+.custom
+{
+    display: flex;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.5;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    color: black;
+}
+.custom>i
+{
+  margin-right: 1rem;
+}
+.collapsible-body a
+{
+  color: black !important;
+  font-size: 1.6em;
+}
+.cust
+{
+  margin-left:300px;
+  height: 100%;
+  width:100%;
+  position: fixed;
+}
+.top-text
+{
+  margin-right: auto;
+  margin-left: auto;
+  width:20%;
+  font-size: 1.8em;
+}
+.complaint
+{
+  margin-left: 5%;
+}
+.card-image
+{
+  display:flex;
+  font-size: 1.6rem;
+}
+.chip
+{
+  margin-top: 20px;
+}
+.tag
+{
+  margin-left: 5%;
+  /*margin-top: 0;*/
+}
+.card-content
+{
+    padding-top:0 !important;
+}

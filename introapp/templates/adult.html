@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+  {% load static %}
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+     <!--Import my css-->
+     <!-- <link rel="stylesheet" href="randombully.css"> -->
+     <!--Import chart js-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Adult Councelling</title>
+    </head>
+
+    <body>
+            <!--page layout start-->
+      <div class="row"></div>
+        <div class="parallax-container">
+          <div class="parallax"><img src="{% static 'img/adultimage.png' %}"></div>
+        </div>
+        <div class="section white">
+          <div class="row container">
+            <h2 class="header"></h2>
+            <p class="grey-text text-darken-3 lighten-3">
+              <h2 class="purple-text text-darken-2">Even adults get bullied.</h2><hr></hr>
+              <ul class="collapsible">
+                <li>
+                  <div class="collapsible-header red-text text-darken-4"><i class="material-icons">face</i>Warning signs</div>
+                  <div class="collapsible-body"><span class="red-text">
+                    - When you deal with cyberbullying, you need to look at the fact that these cyberbullies are simply
+                    trying to get a rise out of you overreacting. Cyberbullies are harmful because they rarely think of
+                    the consequences of their actions. This makes them a double-edged sword. If handled carefully, we can cut them
+                    but if we handle them carelessly, they may be able to cause unwanted devastation. <br> <br>
+                    - Their anonymity is also a constant threat. You can be cyberbullied by a complete stranger or a close acquaintance
+                    without ever being able to tell who the culprit is. Bullies may feel empowered to say and do more
+                    destructive things than they would face-to-face when they are interacting with their victims screen-to-screen. <br> <br>
+                    - It can be nearly impossible to rid the internet of offensive material that a cyberbully makes public; once a photo,
+                    rumor, or video has made it into a cyberspace, it becomes persistant. <br> <br>
+                    -Cyberbullying follows you home. A student being bullied at school may find
+                    refuge in other spaces, but a victim of cyberbullying is connected to his or
+                     her tormentors whenever he or she is
+                    connected to a cell phone or computer—which for many teens is all the time.
+
+                  </span></div>
+                </li>
+          <li>
+          <div class="collapsible-header green-text text-darken-4"><i class="material-icons">child_care</i>Solution</div>
+          <div class="collapsible-body"><span class="green-text">
+            - Cyberbullying involves posting pictures and mean comments,
+            spreading rumors and lies, and humiliating or attacking someone
+             without their consent. If you want to stop this malicious behavior in it's tracks, don't forward hateful emails or content
+            to your friends. Forwarding this type of information will feed into it and even implicate you as a cyber bully.<br></br>
+            - If you receive a hurtful and harassing form of electronic content toward another person, whether you know the person or not,
+             reply to them and let them know cyberbullying is hurtful. Explain to them that the person being attacked could easily be a
+              close friend or family member and that you're pretty sure their loved ones would be outraged; not to mention the person
+              being attacked. Some say it's best not to respond to the bully since that's exactly what they want. This may be true,
+               however if you respond only once to everyone receiving the email from the cyberbullying, reminding them they are causing
+              more harm by forwarding the hurtful email on, it might send a strong message.<br></br>
+              - Block, report, and flag any and all content by a cyber bully. This sends a strong statement that you
+               won't condone this type of internet behavior, nor can your sense of right and wrong be penetrated by
+                feeding into it for the sake of a good laugh. Adults are just as vulnerable as teenagers when it comes to cyberbullying.
+               They too will second guess themselves and assume they are a joke. No one is immune to the effects of
+                cyberbullying, not even adults. <br></br>
+                - Somtimes if you are lucky, you might be able to click on the cyberbully's username
+                and find a link to some of their information. This information may include their website and even place of work.
+                If a bully feels they have a right to vicitimize and humiliate a perfectly good stranger, we don't see why that
+                perfectly good stranger can't write a letter to the cyberbully's place of work and let them
+                know what type of person they have employed at their business by informing them of their cruel cyberbully activities.
+
+          </span></div>
+        </li>
+
+              </ul>
+
+
+          </div>
+
+        </div>
+            <div class="container">
+          <div class="row">
+              <div class="col s12 m6 l6">
+                  <a class="waves-effect waves-light btn-large left green darken-1" href="/"><i class="material-icons left">chevron_left</i>Go Back</a>
+              </div>
+              <div class="col s12 m6 l6">
+                  <a class="waves-effect waves-light btn-large right red lighten-1" href="{% url 'complaints' %}"><i class="material-icons right">arrow_forward</i>Not satisfied ? File a complaint</a>
+              </div>
+          </div>
+      </div>
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $('.parallax').parallax();
+        });</script>
+  </body>
+  </html>

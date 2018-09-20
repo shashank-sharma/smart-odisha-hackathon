@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block pagecontent %}
+  <p class="flow-text" style="font-size: 42px;">Sign Up</p>
+<div class="red card" style="padding: 5px;color: white">
+  {% for message in messages %}
+<p>{% if 'safe' in message.tags %}{{ message|safe }}{% else %}{{ message }}{% endif %}</p>
+{% endfor %}
+</div>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <div class="g-recaptcha" data-sitekey="6Le9FWoUAAAAAGajmTHTZfhSwutTTZ8QW2s17scZ"></div>
+    <button type="submit" class="btn">Sign up</button>
+  </form>
+
+{% endblock %}
