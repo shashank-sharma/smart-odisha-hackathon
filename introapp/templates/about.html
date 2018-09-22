@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home</title>
+    <title>About</title>
     
     
 </head>
@@ -104,7 +104,7 @@ Analytical data will include the location(s) and the tag(s) associated with the 
     </div>
 </div>
 
-<div class = "row" style = "padding-left: 100px; padding-right:100px;">
+<div class = "row" style = "padding-left: 100px; padding-right:100px;" id = "stop">
     <div class = "col s12 m12 l12">
         <h2 class = "white-text flow-text">Walthrough:</h2><hr class = "hrColor"><br><br><br>
     </div>
@@ -114,41 +114,33 @@ Analytical data will include the location(s) and the tag(s) associated with the 
 <!--Arrow animations-->
 
 <div class = "row" style = "padding-left: 100px; padding-right:100px;">
-    <div class = "col s12 m12 l4">
-        <h5 class = "fontColor" style = "padding-left: 20px;">Victim: visits the website</h5>
-        <img src = "http://pngimage.net/wp-content/uploads/2018/06/person-logo-png.png" style = "padding-left: 50px;height:200px;width:250px">
+    <div class = "col s12 m12 l3">
+        <h5 class = "fontColor" style = "padding-left: 20px;">Victim: visits the website for counceling and reporting.</h5>
+        <img src = "http://pngimage.net/wp-content/uploads/2018/06/person-logo-png.png" style = "padding-left: 50px;height:100px;width:150px">
     </div>
-</div>
-
-<div class = "row" style = "padding-left: 155px; padding-right: 100px;">
-    
-    <div class = "col s12 m12 l4">
+    <div class = "col s12 m12 l1" style = "padding-top: 100px;">
         <div class="container">
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
     </div>
-    </div>
-</div>
-<br>
-<div class = "row" style = "padding-left: 120px; padding-right:100px;">
-    <br>
-    <div class = "col s12 m12 l4">
+    <div class = "col s12 m12 l3">
         <h5 class = "fontColor">Victim: Fills a brief questionaire as part of the counceling process.</h5>
-        <img src = "https://www.simplypsychology.org/questionnaire.png" style = "height: 400px; width:450px;">
+        <img src = "https://www.simplypsychology.org/questionnaire.png" style = "height: 160px; width:150px;">
     </div>
-    <div class = "col s12 m12 l1" style = "padding-top: 150px;">
+    <div class = "col s12 m12 l1" style = "padding-top: 10px;">
         <div class="containerTwo">
             <div class="chevron"></div>
             <div class="chevron"></div>
             <div class="chevron"></div>
         </div>
     </div>
-    <div class = "col s12 m12 l7" style = "padding-left: 20px;">
+    <div class = "col s12 m12 l4">
         <h5 class = "fontColor">Victim: Fills complaint form</h5><br>
-        <img src = "http://www.osc.gov.on.ca/static/images/Stock/form-icon.png" style = "height:400px; width: 400px;">
+        <img src = "http://www.osc.gov.on.ca/static/images/Stock/form-icon.png" style = "height:200px; width: 150px;">
     </div>
+
 </div>
     </div>
 </div>
@@ -209,6 +201,7 @@ $(document).ready(function(){
             $('#four-product').fadeIn();
             $('#five-product').fadeIn();
             $('#six-product').fadeIn();
+            $('#seven-product').fadeIn();
             $('#seven-product').fadeIn();
         } else {
                 $('#one-product').fadeOut();
