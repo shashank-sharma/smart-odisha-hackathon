@@ -89,3 +89,7 @@ def cs4(request):
     return render(request, 'case_study4.html', {})
 
 
+def about(request):
+    return render(request, 'about.html', {})
+
+
