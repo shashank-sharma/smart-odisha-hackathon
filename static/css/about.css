@@ -306,10 +306,6 @@ body {
     right: 0;
 }
 
-.nav-wrapper{
-    background-image: url("https://newevolutiondesigns.com/images/freebies/texture-wallpaper-23.jpg");
-
-}
 
 .fontColor{
     background-image: url("https://www.apple.com/v/iphone-xs/a/images/overview/copy_texture_1_large.jpg");
@@ -326,7 +322,7 @@ body {
     border-color: yellow;
 }
 
-.container {
+.containerOne {
   position: relative;
   width: 24px;
   height: 24px;
