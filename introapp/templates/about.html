@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/about.css' %}"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/loader.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Import chart js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About</title>
+    
+    
+</head>
+<body>
+
+<!--Navbar-->
+<nav>
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+<!--Navbar end-->
+<div class="row">
+    <div class="col s12 l12 m12" style="height: 100vh;">
+        <h5 class="flow-text center-block left-align fontColor"style="position:absolute;font-size: 52px;
+        top: 20%;text-align: center;padding: 100px;">
+            Are you being bullied?<br><br>
+            Allow us to help you overcome the ever-rising barrier of cyberbulling
+        </h5>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m12 l5" id="codebase" style="padding-left: 100px;">
+        <div class="flow-text fontColor">
+            <p style="font-size: 40px">Code base</p><hr class = "hrColor"><br>
+            <p>We keep your data secure so that no hacker can get into your personal data.</p><br>
+            <p>A ticket will be generated for every complaint. This ticket will possess a unique ID. </p><br>
+            <p>This will help the consultant and the user to uniquely identify the complaint and track down the progress made by the officials in solving the issue.</p>
+        </div>
+    </div>
+    <div class="col s12 m6 l7" style="">
+        <!--Animation-->
+
+        <div class="grid hide-on-med-and-down main-animation">
+            <p class="one" id="one" style="display: none;"><span class="s"></span></p>
+            <p class="two" id="two" style="display: none;"><span class="s"></span></p>
+            <p class="three" id="three" style="display: none;"><span class="s"></span></p>
+            <p class="four" id="four" style="display: none;"><span class="s"></span></p>
+            <p class="five" id="five" style="display: none;"><span class="s"></span></p>
+            <p class="six" id="six" style="display: none;"><span class="s"></span></p>
+            <p class="seven" id="seven" style="display: none;"><span class="s"></span></p>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="padding-top: 200px;">
+    <div class="col s12 m12 l5" id="dashboard" style="padding-left: 100px;">
+        <div class="flow-text fontColor">
+            <p style="font-size: 40px">Admin Dashboard</p><hr class = "hrColor"><br>
+            <p>We have proper organization for admin to have systematic work</p><br>
+            <p>Complaints will be classified on the basis of tags. This allows the officials to search for problems on the basis of tags.</p><br>
+            <p>This will include a certain level of flexibility to the search process and the officials as well since they can now search for tags in their area of expertise.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="padding-top: 200px;padding-bottom: 200px;">
+    <div class="col s12 m12 l5" id="analytics" style="padding-left: 100px;">
+        <div class="flow-text fontColor">
+            <p style="font-size: 40px">Analytics</p><hr class = "hrColor"><br>
+            <p>Data will be analyzed on a regular basis and shown in the analytics dashboard.</p>
+            <p>
+Analytical data will include the location(s) and the tag(s) associated with the complaint
+                This will help in identifying the areas which are infested with the heinous crime of cyberbullying</p><br>
+<p>This will also bring into our notice the types of cyberbullying occuring in those areas, including the frequency at which the complaints are addressed and solved by the authorities.</p><br>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row" style="padding-top: 50px;padding-bottom: 300px;" id="product">
+    <div class="col s12 m12 l5" id="analytics" style="padding-left: 100px;height: 300px;">
+        <div class="flow-text fontColor">
+            <p style="font-size: 40px">Summary</p><hr class = "hrColor"><br>
+            <p>In short we have layers of implementation to make sure that we solve your problems.</p><br>
+        </div>
+    </div>
+        
+        <!--Animation-->
+
+        <div class="grid hide-on-med-and-down main-animation">
+            <p class="one" id="one-product" style="display: none;"><span class="s"></span></p>
+            <p class="two" id="two-product" style="display: none;"><span class="s"></span></p>
+            <p class="three" id="three-product" style="display: none;"><span class="s"></span></p>
+            <p class="four" id="four-product" style="display: none;"><span class="s"></span></p>
+            <p class="five" id="five-product" style="display: none;"><span class="s"></span></p>
+            <p class="six" id="six-product" style="display: none;"><span class="s"></span></p>
+            <p class="seven" id="seven-product" style="display: none;"><span class="s"></span></p>
+        </div>
+    </div>
+</div>
+
+<div class = "row" style = "padding-left: 100px; padding-right:100px;" id = "stop">
+    <div class = "col s12 m12 l12">
+        <h2 class = "white-text flow-text">Walthrough:</h2><hr class = "hrColor"><br><br><br>
+    </div>
+</div>
+
+
+<!--User side-->>
+
+<h1 class = "white-text flow-text center">User side</h1><hr style = "width: 110px;margin-left: 868px;margin-top: -20px" class = "hrColor"><br><br>
+<div class = "row" style = "padding-left: 220px; padding-right:100px;">
+    <div class = "col s12 m12 l3">
+        <h5 class = "fontColor" style = "padding-left: 20px;">Victim: visits the website for counceling and reporting.</h5>
+        <img src = "http://pngimage.net/wp-content/uploads/2018/06/person-logo-png.png" style = "padding-left: 80px;height:150px;width:230px">
+    </div>
+    <div class = "col s12 m12 l1" style = "padding-top: 130px;">
+        <div class="containerOne">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
+    </div>
+    <div class = "col s12 m12 l3">
+        <h5 class = "fontColor">Victim: Fills a brief questionaire as part of the counceling process.</h5>
+        <img src = "https://www.simplypsychology.org/questionnaire.png" style = "height: 180px; width:290px; padding-left: 125px">
+    </div>
+    <div class = "col s12 m12 l1" style = "padding-top: 10px;">
+        <div class="containerTwo">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
+    </div>
+    <div class = "col s12 m12 l4">
+        <h5 class = "fontColor">Victim: Fills complaint form</h5><br>
+        <img src = "http://www.osc.gov.on.ca/static/images/Stock/form-icon.png" style = "height:190px; width: 230px;padding-left: 90px">
+    </div>
+
+</div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!--User side end-->
+
+<!--Admin side-->
+
+<h1 class = "white-text flow-text center">Admin side</h1><hr style = "width: 110px;margin-left: 868px;margin-top: -20px" class = "hrColor"><br><br>
+<div class = "row" style = "padding-left: 220px; padding-right:100px;">
+    <div class = "col s12 m12 l3">
+        <h5 class = "fontColor" style = "padding-left: 20px;">Admin: visits website and views complaints.</h5>
+        <img src = "https://www.pwddelhi.gov.in/img/loggin.png" style = "padding-left: 80px;height:150px;width:230px">
+    </div>
+    <div class = "col s12 m12 l1" style = "padding-top: 130px;">
+        <div class="containerOne">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
+    </div>
+    <div class = "col s12 m12 l3">
+        <h5 class = "fontColor">Admin: Updates status and solves complaint.</h5>
+        <img src = "https://www.shareicon.net/data/2017/02/09/878601_check_512x512.png" style = "height: 180px; width:270px; padding-left: 100px">
+    </div>
+    <div class = "col s12 m12 l1" style = "padding-top: 10px;">
+        <div class="containerTwo">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+        </div>
+    </div>
+    <div class = "col s12 m12 l4">
+        <h5 class = "fontColor">Admin: Views analytical data</h5><br>
+        <img src = "{% static 'img/analytics.png' %}" style = "height:190px; width: 330px;padding-left: 5px">
+    </div>
+
+</div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+
+
+
+<!--Admin side end-->
+
+<!--Footer start-->
+
+  <footer class="page-footer black">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="fontColor">Footer Content</h5>
+                <p class="fontColor">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="fontColor">Links</h5>
+                <ul>
+                  <li><a class="fontColor" href="#!">Link 1</a></li>
+                  <li><a class="fontColor" href="#!">Link 2</a></li>
+                  <li><a class="fontColor" href="#!">Link 3</a></li>
+                  <li><a class="fontColor" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="fontColor right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+<!--Footer js-->
+
+
+<script type="text/javascript" src="{% static 'js/footer.js' %}"></script>
+<!--Footer js end-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
+    $(window).scroll(function () {
+        function elementScrolled(elem) {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+            var elemTop = $(elem).offset().top + 200;
+            return ((elemTop <= docViewBottom + 50) && (elemTop >= docViewTop));
+        }
+
+        if (elementScrolled('#codebase')) {
+            $('#one').fadeIn();
+        } else {
+                $('#one').fadeOut();
+        }
+
+        if (elementScrolled('#dashboard')) {
+            $('#two').fadeIn();
+        } else {
+                $('#two').fadeOut();
+        }
+
+        if (elementScrolled('#analytics')) {
+            $('#three').fadeIn();
+            $('#four').fadeIn();
+            $('#five').fadeIn();
+            $('#six').fadeIn();
+            $('#seven').fadeIn();
+        } else {
+                $('#three').fadeOut();
+                $('#four').fadeOut();
+                $('#five').fadeOut();
+                $('#six').fadeOut();
+                $('#seven').fadeOut();
+        }
+
+
+
+        if (elementScrolled('#product')) {
+            $('#one-product').fadeIn();
+            $('#two-product').fadeIn();
+            $('#three-product').fadeIn();
+            $('#four-product').fadeIn();
+            $('#five-product').fadeIn();
+            $('#six-product').fadeIn();
+            $('#seven-product').fadeIn();
+            $('#seven-product').fadeIn();
+        } else {
+                $('#one-product').fadeOut();
+                $('#two-product').fadeOut();
+                $('#three-product').fadeOut();
+                $('#four-product').fadeOut();
+                $('#five-product').fadeOut();
+                $('#six-product').fadeOut();
+                $('#seven-product').fadeOut();
+        }
+
+    });
+</script>
+</body>
+</html>
