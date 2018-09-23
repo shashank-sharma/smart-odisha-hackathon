@@ -18,10 +18,11 @@
 
     <!-- CSS Files -->
     <link rel="shortcut icon" type="image/png" href="{% static '/img/favicon.ico' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -63,12 +64,12 @@
   </div>
 </nav>
     {% block largepagecontent %} {% endblock %}
-    <div class="container" style="padding-bottom:40px; ">
+
+    <div class="container" style="padding-bottom:30px; top:13%; left: 15%; position: absolute ">
         {% block pagecontent %} {% endblock %}
 
     </div>
-    <br><br><br><br><br><br>
-            <footer class="page-footer teal" style="bottom: 0">
+            <footer class="page-footer teal" style="bottom: 0px;">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
@@ -87,7 +88,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            Made with Love by Scripters
+            <span class="font-family: 'Muli', sans-serif;"> Made with Love by Scripters</span>
             <a class="grey-text text-lighten-4 right" href="#!">From India</a>
             </div>
           </div>
