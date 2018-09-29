@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    background-image: url("/static/img/bg.jpg");
+    background: black;
     perspective: 3000;
     height: 100%;
     width: 100%;
@@ -303,4 +303,21 @@ body {
 .main-animation {
     position: fixed;
     right: 0;
+}
+
+.fontColor{
+    background-image: url("https://www.apple.com/v/iphone-xs/a/images/overview/copy_texture_1_large.jpg");
+    -webkit-background-clip:text;
+    color: transparent;
+}
+
+.top {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.hrColor{
+    border-color: yellow;
 }
